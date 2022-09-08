@@ -25,7 +25,22 @@ return (
     <br/>
 
     
-    
+    <header className="Navbar">
+        <div className="Toolbar">
+          <div className="Logo">
+            {" "}
+            <span role="img" aria-label="logo">
+              😏
+            </span>{" "}
+          </div>
+          <div className="Title"> Watermarke </div>
+          <div>
+            <button> Contact </button>
+          </div>
+        </div>
+      </header>
+      <div className="Toolbar" />
+      
     <Typography variant="h2" color="primary" align="center" >
       WATERMARKE
     </Typography>
