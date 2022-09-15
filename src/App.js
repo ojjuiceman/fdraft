@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -12,6 +13,8 @@ import { ListItemIcon, ListItemText } from '@material-ui/core';
 import AdjustOutlinedIcon from '@mui/icons-material/AdjustOutlined'
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
+import { Instagram, Twitter } from '@mui/icons-material';
+import { Stack } from '@mui/material';
 
 
 
@@ -20,6 +23,15 @@ import Divider from "@material-ui/core/Divider";
 
 function App() {
 
+  const ref = useRef(null);
+  const nex = useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
+  const handleClicks = () => {
+    nex.current?.scrollIntoView({behavior: 'smooth'});
+  };
+
 return (
   <div className="App">
     <br/>
@@ -27,16 +39,17 @@ return (
     
     <header className="Navbar">
         <div className="Toolbar">
-          <div className="Logo">
-            {" "}
-            <span role="img" aria-label="logo">
-              😏
-            </span>{" "}
-          </div>
           <div className="Title"> Watermarke </div>
-          <div>
-            <button> Contact </button>
+         <div>
+            <Stack direction="row" spacing={3}>
+            <button onClick={handleClick} color="success"> Services </button>
+            <button onClick={handleClicks} color="success"> About </button>
+            <FacebookIcon  />
+            <Instagram />
+            <Twitter />
+            </Stack>
           </div>
+         
         </div>
       </header>
       <div className="Toolbar" />
@@ -59,7 +72,7 @@ return (
     </Typography>
     
     <br></br>
-    <Typography variant="h3" color="primary" align="center" >
+    <Typography ref={nex} variant="h3" color="primary" align="center" >
     ABOUT
     <br></br>
     </Typography>
@@ -126,7 +139,7 @@ return (
 
   
 
-    <Typography variant="h3" color="primary" align="center" >
+    <Typography ref={ref} variant="h3" color="primary" align="center" >
     Services
     </Typography>
 
