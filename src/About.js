@@ -33,18 +33,16 @@ function About() {
 const navToHome = () => {
   navigate('/')
 };
+
+const navToCont = () => {
+  navigate('/contact')
+};
 return (
   <div>
      <header className="Navbar">
             <div className="Toolbar">
               <div className="Title"> Watermarke </div>
-             <div>
-                <Stack direction="row" spacing={3}>
-                <FacebookIcon  />
-                <Instagram />
-                <Twitter />
-                </Stack>
-              </div>
+             
              
             </div>
           
@@ -122,6 +120,7 @@ return (
   <Stack direction="Row" spacing={4}>
         <button color="primary" onClick={navToServ}> Services </button>
         <button color="primary" onClick={navToHome}> Home </button>
+        <button color="primary" onClick={navToCont}> Contact </button>
     </Stack>
   </Box>
                 

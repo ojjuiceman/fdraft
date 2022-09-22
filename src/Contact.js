@@ -18,7 +18,7 @@ import { Stack } from '@mui/material';
 import Box from '@material-ui/core/Box';
 
 
-export function Home(){
+export default function Contact(){
 
     const navigate = useNavigate();
 
@@ -28,8 +28,8 @@ export function Home(){
 const navToAbout = () => {
     navigate('/about')
 };
-const navToCont = () => {
-    navigate('/contact')
+const navToHome = () => {
+    navigate('/')
   };
 
     return(
@@ -37,7 +37,7 @@ const navToCont = () => {
         <header className="Navbar">
             <div className="Toolbar">
               <div className="Title"> Watermarke </div>
-            
+           
              
             </div>
           
@@ -53,21 +53,29 @@ const navToCont = () => {
     <Typography variant="h2" color="primary" align="center" >
       WATERMARKE
     </Typography>
-    <Typography variant="body1" color="textSecondary" align="center" >
-    At Watermarke, we specialize in business planning and data analysis. For years, we have accumulated professional experience in different industries. We’ve worked with financial services and institutions, bank retailers and medical suppliers. All had the same goal: Revenue growth and continuous improvement.
+    <Typography variant="h3" color="textSecondary" align="center" >
+    Contact us Via Email or Phone to learn more about our services and how we can help you
     </Typography>
     <br></br>
-    <Typography variant="body1" color="textSecondary" align="center" >
-    We help you with performance management, marketing planning and strategic planning for business. We can also give you support for business meetings, project assessments and evaluations, project management and marketing funnel automation to cut the costs in your company.
+    <Typography variant="h4" color="textSecondary" align="center" >
+    Contact Email: Watermarkesolutions@icloud.com
     </Typography>
     <br></br>
-    <Typography variant="body1" color="textSecondary" align="center" >
-    Our definition of success is bringing people, resources and teams together, to work cooperatively on resolving issues, assessing customer needs and meeting the revenue growth requirements and business requirements on a global scale. We use data analytics to create a digital marketing strategy that works.
+    <Typography variant="h4" color="textSecondary" align="center" >
+    Contact Phone Number: 949-310-4877    
     </Typography>
-    <Stack direction="Row" spacing={4}>
+    
+    
+                <FacebookIcon align="center" onClick={event =>  window.location.href='https://facebook.com'} />
+                <Instagram align="center" onClick={event =>  window.location.href='https://instagram.com'} />
+                <Twitter align="center" onClick={event =>  window.location.href='https://twitter.com/home'} />
+            <br></br>
+            <br></br>
+    <Stack align="center" direction="Row" spacing={4}>
         <button color="primary" onClick={navToServ}> Services </button>
         <button color="primary" onClick={navToAbout}> About </button>
-        <button color="primary" onClick={navToCont}> Contact </button>
+        <button color="primary" onClick={navToHome}> Home </button>
+
     </Stack>
     </Box>
 
@@ -76,4 +84,3 @@ const navToCont = () => {
     )
 
 }
-

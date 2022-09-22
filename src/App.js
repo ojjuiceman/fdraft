@@ -14,12 +14,12 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import AdjustOutlinedIcon from '@material-ui/icons/AdjustOutlined';
+import AdjustOutlinedIcon from '@mui/icons-material/AdjustOutlined';
 import Services from './Services';
 import About from './About';
 import {Navbar} from './Navbar';
 import {Home} from './Home';
-
+import Contact from './Contact'
 import Divider from "@material-ui/core/Divider";
 import { Instagram, Twitter } from '@mui/icons-material';
 import { Stack } from '@mui/material';
@@ -45,6 +45,7 @@ return (
   <Route path='/' element={<Home/>} />
   <Route path='/about' element={<About/>} />
   <Route path='/services' element={<Services/>} />
+  <Route path='/contact' element={<Contact />} />
   </Routes>
   </div>
 
